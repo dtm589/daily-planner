@@ -20,4 +20,17 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
+  function updateTime() {
+    const dateEl = $('#date');
+    const timeEl = $('#time');
+    const currentDate = dayjs().format('dddd, MMMM D, YYYY');
+    const currentTime = dayjs().format('hh:mm:ss A');
+    dateEl.text(currentDate);
+    timeEl.text(currentTime);
+  };
+
+  // Call all the fucntions
+  updateTime();
+  // Update the seconds every second
+  const timeID = setInterval(updateTime, 1000);
 });
