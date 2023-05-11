@@ -23,7 +23,7 @@ The Work Day Planner creates efficency and ease among your busy schedule. You ca
 
 ## Screenshots:
 ### Figure 1. Screenshot
-![](assets\images\dailyplanner.PNG) 
+<img src="assets\images\dailyplanner.PNG" alt="Image of displayed site">
 
 
 ## Built With
