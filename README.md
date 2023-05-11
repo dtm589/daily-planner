@@ -7,9 +7,7 @@
 The Work Day Planner creates efficency and ease among your busy schedule. You can document all upcoming events for the day in your planer, It's easy to keep track with the color boxs; grey indicates the past, red indicaates the current time, and green indicates the promising future.. making it visually easy for varying consumers to keep track of the their time and events. 
 
 ## Table of Contents:
-- [Overview](#Overview)
-- [Usage Information](#Usage-Information)
-- [Installation Process](#Installation-Process)
+- [Usage Information](#Usage-Instructions)
 - [Built With](#Built-With)
 - [License](#License)
 - [Author](#Author)
@@ -36,11 +34,11 @@ The Work Day Planner creates efficency and ease among your busy schedule. You ca
 - License Badge: [Shields.io](https://shields.io/)
 - Visual Studio Code: [Website](https://code.visualstudio.com/)
 
-## License & Copyright ©
+## License
   
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ## Author
 
-Follow me on Github at [dtm589](https://github.com/dtm589)! Additional questions or concerns? feel free to contact me at derekmarchese1@gmail.com.
+Follow me on Github at [dtm589](https://github.com/dtm589)! Additional questions or concerns? Feel free to contact me at derekmarchese1@gmail.com.
