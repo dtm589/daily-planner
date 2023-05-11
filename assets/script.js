@@ -4,22 +4,30 @@
 $(function () {
   // Add event listeners on save buttons. Save to local storage.
   function saveEntry() {
-    $('.saveBtn').on('click', function() {
+    $('.saveBtn').on('click', function () {
       const hour = $(this).parent().attr('id');
       const text = $(this).siblings('.description').val();
       localStorage.setItem(hour, text);
     });
   }
 
-
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
+  // Adds and removes the past, present, and future class from each .time-block
+  function addColor() {
+    $('.time-block').each(function () {
+      let currentHour = dayjs().format('H');
+      let sectionHour = parseInt(this.id);
+      if (sectionHour == currentHour) {
+        $(this).removeClass('past future').addClass('present');
+      } else if (sectionHour < currentHour) {
+        $(this).removeClass('future present').addClass('past');
+      } else {
+        $(this).removeClass('past present').addClass('future');
+      }
+    });
+  };
 
   // Display the user input from the local storage
-  $('.time-block').each(function() {
+  $('.time-block').each(function () {
     const hour = $(this).attr('id');
     const text = localStorage.getItem(hour);
     $(this).children('.description').val(text);
@@ -38,6 +46,9 @@ $(function () {
   // Call all the fucntions
   updateTime();
   saveEntry();
+  addColor();
   // Update the seconds every second
   const timeID = setInterval(updateTime, 1000);
+  //Update every hours color every hour
+  const hourID = setInterval(addColor, 3600000);
 });
